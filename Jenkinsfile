@@ -1,5 +1,5 @@
 #!groovy
-node(' next_Python') {
+node() {
     stage('Checkout'){
        echo "Checking out source"
        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/odiarra/testestt.git']]])
